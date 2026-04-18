@@ -1,18 +1,41 @@
-//ANIMATION LOGIC
+//Animation Logic
 
-const faders = document.querySelectorAll('.fade-in');
+let step = 0;
 
-const appearOptions = {
-threshold: 0.2
-};
+function openCard(card){
+    step = 0;
+    showContent(card);
+}
 
-const appearOnScroll = new IntersectionObserver(function(entries) {
-entries.forEach(entry => {
-if (!entry.isIntersecting) return;
-entry.target.classList.add('show');
-});
-}, appearOptions);
+function showContent(card){
+    const data = {
+        rs: [
+            "Satellite image preprocessing",
+            "LULC classification",
+            "NDVI analysis",
+            "LST mapping",
+            "Change detection"
+        ],
+        gis: [
+            "Spatial overlay analysis",
+            "Buffer & proximity analysis",
+            "Suitability modeling",
+            "Network analysis",
+            "Map production"
+        ]
+    };
 
-faders.forEach(fader => {
-appearOnScroll.observe(fader);
-});
+    alert(card.toUpperCase() + "\n\n" + data[card].join("\n"));
+
+    step++;
+
+    if(step < 2){
+        setTimeout(() => {
+            if(confirm("Go to next category?")){
+                alert("Next card opens...");
+            } else {
+                alert("Go to Sample Projects");
+            }
+        }, 500);
+    }
+}

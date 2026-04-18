@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AUGUSTIN GIS Portfolio</title>
+<title>GIS Dashboard Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,50 +12,29 @@
 
 <div class="main">
 
-<!-- WELCOME CARD -->
-<div class="welcome" onclick="showCard('welcome')">
+<!-- WELCOME -->
+<div class="welcome" onclick="show('welcome')">
 <h1>Welcome to AUGUSTIN GIS Portfolio</h1>
-<p>Geospatial Specialist | Earth Observation | GIS Intelligence</p>
+<p>Geospatial Intelligence | Earth Observation | GIS Solutions</p>
 </div>
 
-<!-- CARDS GRID -->
+<!-- GRID (6 CARDS - 2 COLUMNS) -->
 <div class="grid">
 
-<div class="card" onclick="showCard('gis')">
-<h3>GIS Analysis</h3>
-<div class="mini"></div>
-</div>
+<div class="card" onclick="show('gis')">GIS Analysis</div>
+<div class="card" onclick="show('rs')">Remote Sensing</div>
 
-<div class="card" onclick="showCard('rs')">
-<h3>Remote Sensing</h3>
-<div class="mini"></div>
-</div>
+<div class="card" onclick="show('photo')">Photogrammetry</div>
+<div class="card" onclick="show('prog')">Programming</div>
 
-<div class="card" onclick="showCard('photo')">
-<h3>Photogrammetry</h3>
-<div class="mini"></div>
-</div>
-
-<div class="card" onclick="showCard('prog')">
-<h3>Programming</h3>
-<div class="mini"></div>
-</div>
-
-<div class="card" onclick="showCard('db')">
-<h3>Databases</h3>
-<div class="mini"></div>
-</div>
-
-<div class="card" onclick="showCard('web')">
-<h3>Web Mapping</h3>
-<div class="mini"></div>
-</div>
+<div class="card" onclick="show('db')">Databases</div>
+<div class="card" onclick="show('web')">Web Mapping</div>
 
 </div>
 
-<!-- CONTENT PANEL -->
+<!-- PANEL -->
 <div id="panel" class="panel">
-<button onclick="closePanel()">X</button>
+<button onclick="closePanel()">Close</button>
 <div id="content"></div>
 </div>
 

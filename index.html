@@ -1,174 +1,177 @@
-//Index html
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>GIS Portfolio - Augustin</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#0b1320;
-color:white;
-display:flex;
-}
-
-/* SIDE LABEL */
-.sidebar{
-width:60px;
-background:#111a2e;
-display:flex;
-align-items:center;
-justify-content:center;
-writing-mode:vertical-rl;
-transform:rotate(180deg);
-font-weight:bold;
-letter-spacing:2px;
-color:#00d4ff;
-}
-
-/* MAIN AREA */
-.main{
-flex:1;
-padding:20px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-}
-
-/* WELCOME CARD */
-.welcome{
-grid-column:span 2;
-background:linear-gradient(135deg,#00c6ff,#0072ff);
-padding:40px;
-border-radius:15px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.welcome:hover{
-transform:scale(1.02);
-}
-
-/* CARDS */
-.card{
-background:#152238;
-padding:20px;
-border-radius:15px;
-cursor:pointer;
-transition:0.3s;
-position:relative;
-overflow:hidden;
-}
-
-.card:hover{
-background:#1f2f4a;
-transform:translateY(-5px);
-}
-
-/* MINI GRAPH STYLE */
-.graph{
-height:40px;
-background:linear-gradient(to right,#00d4ff,#00ff88);
-margin-top:10px;
-border-radius:5px;
-opacity:0.7;
-}
-
-/* TITLE */
-h2,h3{
-margin:5px 0;
-}
-
-.small{
-opacity:0.7;
-font-size:13px;
-}
-
-</style>
+<title>GIS Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="sidebar">
-TECHNICAL SKILLS
-</div>
+<h1>Welcome to AUGUSTIN GIS Portfolio</h1>
+<p>I am a geospatial analyst applying geospatial technologies to transform spatial data into actionable intelligence for decision-making.</p>
 
-<div class="main">
+<h2>Explore My Geospatial Capabilities ↓</h2>
 
+<!-- CARDS -->
 <div class="grid">
 
-<!-- WELCOME PAGE -->
-<div class="welcome" onclick="openPage('welcome')">
-<h1>Welcome to AUGUSTIN'S Portfolio </h1>
-<h2>I am a Geospatial proffessional applying the Geospatial Technologies to transform spatial data into actionable intelligence fo Informed decision making</h2>
-<p>Explore my geospatial capabilities in GIS, Remote Sensing, Programming, Photogrammetry & Web Mapping</p>
-</div>
-
-<!-- GIS -->
-<div class="card" onclick="openPage('gis')">
-<h3>GIS Analysis</h3>
-<p class="small">Spatial analysis & mapping</p>
-<div class="graph"></div>
-</div>
-
-<!-- REMOTE SENSING -->
-<div class="card" onclick="openPage('rs')">
+<div class="card" onclick="openPage('rs.html')">
 <h3>Remote Sensing</h3>
-<p class="small">Satellite image analysis</p>
-<div class="graph"></div>
+<p>Satellite Image Processing</p>
 </div>
 
-<!-- PHOTOGRAMMETRY -->
-<div class="card" onclick="openPage('photo')">
+<div class="card" onclick="openPage('gis.html')">
+<h3>GIS Analysis</h3>
+<p>Spatial Analysis</p>
+</div>
+
+<div class="card" onclick="openPage('photo.html')">
 <h3>Photogrammetry</h3>
-<p class="small">Drone & 3D modeling</p>
-<div class="graph"></div>
-</div>
-
-<!-- PROGRAMMING -->
-<div class="card" onclick="openPage('programming')">
-<h3>Programming</h3>
-<p class="small">Python GIS automation</p>
-<div class="graph"></div>
-</div>
-
-<!-- DATABASE -->
-<div class="card" onclick="openPage('database')">
-<h3>Databases</h3>
-<p class="small">Spatial data management</p>
-<div class="graph"></div>
-</div>
-
-<!-- WEB GIS -->
-<div class="card" onclick="openPage('webgis')">
-<h3>Web Mapping</h3>
-<p class="small">Interactive GIS apps</p>
-<div class="graph"></div>
+<p>Drone Mapping</p>
 </div>
 
 </div>
-</div>
 
-<script>
-function openPage(page){
-alert("Navigate to: " + page + " (next step I can generate full pages for you)");
-}
-</script>
+<script src="script.js"></script>
+
+</body>
+</html> 
+
+//REMOTE SENSING
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remote Sensing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Remote Sensing</h1>
+
+<h2>What I can do:</h2>
+
+<ul>
+<li>Satellite image preprocessing (radiometric & atmospheric correction)</li>
+<li>Land Use / Land Cover classification</li>
+<li>NDVI vegetation analysis</li>
+<li>Land Surface Temperature (LST) mapping</li>
+<li>Change detection over time</li>
+</ul>
+
+<!-- NEXT BUTTON -->
+<button onclick="openPage('photogrammetry.html')">
+Next → Photogrammetry
+</button>
+
+<script src="script.js"></script>
 
 </body>
 </html>
 
+//PHOTOGRAMMETRY
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photogrammetry</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
 
+<h1>Photogrammetry</h1>
+
+<h2>What I can do:</h2>
+
+<ul>
+<li>Drone image processing & alignment</li>
+<li>Orthomosaic generation</li>
+<li>Digital Surface Model (DSM)</li>
+<li>3D terrain modelling</li>
+<li>Point cloud generation</li>
+</ul>
+
+<button onclick="openPage('projects.html')">
+View Sample Projects →
+</button>
+
+<script src="script.js"></script>
+
+//WEBMAPPING
  
+</body><!DOCTYPE html>
+<html>
+<head>
+<title>Web Mapping</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
+<body>
+
+<h1>Web Mapping</h1>
+
+<h2>What I can do:</h2>
+
+<ul>
+<li>Interactive web map development</li>
+<li>GIS dashboards creation</li>
+<li>Leaflet/Mapbox applications</li>
+<li>Web feature services (WFS/WMS)</li>
+<li>Online spatial visualization</li>
+</ul>
+
+<button onclick="openPage('projects.html')">
+View Sample Projects →
+</button>
+
+<br><br>
+<button onclick="openPage('index.html')">
+Back Home
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+</html>
+
+//SPATIAL PROGRAMMING
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programming</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h1>Spatial Programming</h1>
+
+<h2>What I can do:</h2>
+
+<ul>
+<li>GIS workflow automation using Python</li>
+<li>Raster and vector data processing</li>
+<li>Batch geoprocessing scripts</li>
+<li>Spatial data analysis scripting</li>
+<li>API-based geospatial processing</li>
+</ul>
+
+<button onclick="openPage('projects.html')">
+View Sample Projects →
+</button>
+
+<br><br>
+<button onclick="openPage('index.html')">
+Back Home
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

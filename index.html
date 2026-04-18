@@ -1,43 +1,208 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GIS Dashboard Portfolio</title>
+<title>AUGUSTIN GIS Portfolio</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0b1320;
+color:white;
+}
+
+/* HEADER */
+.header{
+padding:30px;
+text-align:center;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+/* CONTAINER */
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* ACCORDION BOX */
+.box{
+background:#152238;
+margin:10px 0;
+border-radius:12px;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
+
+.box h2{
+margin:0;
+padding:20px;
+background:#1f2f4a;
+}
+
+/* CONTENT (hidden default) */
+.content{
+max-height:0;
+overflow:hidden;
+transition:0.5s ease;
+padding:0 20px;
+}
+
+/* ACTIVE */
+.box.active .content{
+max-height:400px;
+padding:20px;
+}
+
+/* BUTTON */
+button{
+margin-top:10px;
+padding:10px;
+background:#00d4ff;
+border:none;
+cursor:pointer;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* HOME */
+.home{
+text-align:center;
+padding:40px;
+background:#0f1a2b;
+border-radius:12px;
+margin-top:20px;
+}
+</style>
+
 </head>
 
 <body>
 
-<div class="sidebar">TECHNICAL SKILLS</div>
-
-<div class="main">
-
-<!-- WELCOME -->
-<div class="welcome" onclick="show('welcome')">
+<div class="header">
 <h1>Welcome to AUGUSTIN GIS Portfolio</h1>
-<p>Geospatial Intelligence | Earth Observation | GIS Solutions</p>
+<p>Geospatial Intelligence | Remote Sensing | GIS Engineering</p>
 </div>
 
-<!-- CARDS -->
-<div class="grid">
+<div class="container">
 
-<div class="card" onclick="show('gis')">GIS Analysis</div>
-<div class="card" onclick="show('rs')">Remote Sensing</div>
-<div class="card" onclick="show('photo')">Photogrammetry</div>
-<div class="card" onclick="show('prog')">Programming</div>
-<div class="card" onclick="show('db')">Databases</div>
-<div class="card" onclick="show('web')">Web Mapping</div>
+<!-- GIS -->
+<div class="box">
+<h2 onclick="toggle(this)">GIS Analysis</h2>
+<div class="content">
+<ul>
+<li>Spatial overlay analysis</li>
+<li>Buffer & proximity analysis</li>
+<li>Suitability modeling</li>
+<li>Network analysis</li>
+<li>Map production</li>
+</ul>
+<button onclick="nextBox(event)">View Sample Projects</button>
+</div>
+</div>
+
+<!-- RS -->
+<div class="box">
+<h2 onclick="toggle(this)">Remote Sensing</h2>
+<div class="content">
+<ul>
+<li>Satellite image processing</li>
+<li>LULC classification</li>
+<li>NDVI analysis</li>
+<li>LST mapping</li>
+<li>Change detection</li>
+</ul>
+<button onclick="nextBox(event)">View Sample Projects</button>
+</div>
+</div>
+
+<!-- PHOTO -->
+<div class="box">
+<h2 onclick="toggle(this)">Photogrammetry</h2>
+<div class="content">
+<ul>
+<li>Drone image processing</li>
+<li>Orthomosaic generation</li>
+<li>DSM creation</li>
+<li>3D modelling</li>
+<li>Point cloud processing</li>
+</ul>
+<button onclick="nextBox(event)">View Sample Projects</button>
+</div>
+</div>
+
+<!-- PROGRAMMING -->
+<div class="box">
+<h2 onclick="toggle(this)">Programming</h2>
+<div class="content">
+<ul>
+<li>Python GIS automation</li>
+<li>Raster/vector processing</li>
+<li>Batch geoprocessing</li>
+<li>Spatial scripting</li>
+<li>API integration</li>
+</ul>
+<button onclick="nextBox(event)">View Sample Projects</button>
+</div>
+</div>
+
+<!-- DATABASE -->
+<div class="box">
+<h2 onclick="toggle(this)">Databases</h2>
+<div class="content">
+<ul>
+<li>PostGIS management</li>
+<li>Spatial SQL queries</li>
+<li>Data cleaning</li>
+<li>Database design</li>
+<li>Index optimization</li>
+</ul>
+<button onclick="nextBox(event)">View Sample Projects</button>
+</div>
+</div>
+
+<!-- WEB -->
+<div class="box">
+<h2 onclick="toggle(this)">Web Mapping</h2>
+<div class="content">
+<ul>
+<li>Leaflet/Mapbox apps</li>
+<li>GIS dashboards</li>
+<li>Web services (WMS/WFS)</li>
+<li>Interactive maps</li>
+<li>Online visualization</li>
+</ul>
+<button onclick="nextBox(event)">View Sample Projects</button>
+</div>
+</div>
+
+<!-- HOME END -->
+<div class="home">
+<h2>End of Portfolio</h2>
+<p>Thank you for exploring my GIS capabilities</p>
+</div>
 
 </div>
 
-<!-- PANEL -->
-<div id="panel" class="panel">
-<button onclick="closePanel()">Close</button>
-<div id="content"></div>
-</div>
+<script>
+function toggle(el){
+let box = el.parentElement;
+box.classList.toggle("active");
+}
 
-</div>
+/* simulate next scroll flow */
+function nextBox(event){
+event.stopPropagation();
+let next = event.target.closest(".box").nextElementSibling;
+if(next && next.classList.contains("box")){
+next.scrollIntoView({behavior:"smooth"});
+next.classList.add("active");
+}
+}
+</script>
 
-<script src="script.js"></script>
 </body>
 </html>

@@ -2,32 +2,44 @@ function show(type){
 
 let content = "";
 
+/* WELCOME */
 if(type === "welcome"){
 content = `
+<div class="content-box">
 <h2>Welcome</h2>
 <p>I am a geospatial professional transforming spatial data into actionable intelligence using modern geospatial technologies.</p>
+</div>
 
+<div class="content-box">
 <button onclick="show('projects')">View Sample Projects →</button>
+</div>
 `;
 }
 
+/* GIS */
 if(type === "gis"){
 content = `
+<div class="content-box">
 <h2>GIS Analysis</h2>
 <ul>
 <li>Spatial overlay analysis</li>
-<li>Buffer analysis</li>
+<li>Buffer & proximity analysis</li>
 <li>Suitability modeling</li>
 <li>Network analysis</li>
 <li>Map production</li>
 </ul>
+</div>
 
+<div class="content-box">
 <button onclick="show('projects')">View Sample Projects →</button>
+</div>
 `;
 }
 
+/* RS */
 if(type === "rs"){
 content = `
+<div class="content-box">
 <h2>Remote Sensing</h2>
 <ul>
 <li>Satellite image processing</li>
@@ -36,13 +48,18 @@ content = `
 <li>LST mapping</li>
 <li>Change detection</li>
 </ul>
+</div>
 
+<div class="content-box">
 <button onclick="show('projects')">View Sample Projects →</button>
+</div>
 `;
 }
 
+/* PHOTO */
 if(type === "photo"){
 content = `
+<div class="content-box">
 <h2>Photogrammetry</h2>
 <ul>
 <li>Drone image processing</li>
@@ -51,13 +68,18 @@ content = `
 <li>3D modelling</li>
 <li>Point cloud processing</li>
 </ul>
+</div>
 
+<div class="content-box">
 <button onclick="show('projects')">View Sample Projects →</button>
+</div>
 `;
 }
 
+/* PROGRAMMING */
 if(type === "prog"){
 content = `
+<div class="content-box">
 <h2>Programming</h2>
 <ul>
 <li>Python GIS automation</li>
@@ -66,13 +88,18 @@ content = `
 <li>Spatial scripting</li>
 <li>API integration</li>
 </ul>
+</div>
 
+<div class="content-box">
 <button onclick="show('projects')">View Sample Projects →</button>
+</div>
 `;
 }
 
+/* DATABASE */
 if(type === "db"){
 content = `
+<div class="content-box">
 <h2>Databases</h2>
 <ul>
 <li>PostGIS management</li>
@@ -81,13 +108,18 @@ content = `
 <li>Database design</li>
 <li>Index optimization</li>
 </ul>
+</div>
 
+<div class="content-box">
 <button onclick="show('projects')">View Sample Projects →</button>
+</div>
 `;
 }
 
+/* WEB MAPPING */
 if(type === "web"){
 content = `
+<div class="content-box">
 <h2>Web Mapping</h2>
 <ul>
 <li>Leaflet/Mapbox apps</li>
@@ -96,15 +128,19 @@ content = `
 <li>Interactive maps</li>
 <li>Online visualization</li>
 </ul>
+</div>
 
+<div class="content-box">
 <button onclick="show('projects')">View Sample Projects →</button>
+</div>
 `;
 }
 
+/* PROJECTS */
 if(type === "projects"){
 content = `
+<div class="content-box">
 <h2>Sample Projects</h2>
-
 <ul>
 <li>Urban Expansion Mapping</li>
 <li>LULC Classification Project</li>
@@ -112,6 +148,7 @@ content = `
 <li>NDVI Vegetation Analysis</li>
 <li>Web GIS Dashboard</li>
 </ul>
+</div>
 `;
 }
 
